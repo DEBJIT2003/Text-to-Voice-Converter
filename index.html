@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Voice Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Write or Paste Your Text Here 👇</h1>
+    <textarea id="input-text" rows="5" cols="50" placeholder="Enter your text here"></textarea>
+    <button onclick="convertTextToSpeech()">Convert to Speech</button>
+    <br><br>
+    <div id="output"></div>
+
+    <script>
+        function convertTextToSpeech() {
+            var text = document.getElementById("input-text").value;
+            var speech = new SpeechSynthesisUtterance();
+            speech.text = text;
+
+            speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>
